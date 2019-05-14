@@ -11,7 +11,7 @@ module.exports = class ID3A {
   * Constructor a new id3-algorithm class.
   * @param {Obj} options - options for a new ID3A
   * options = {
-  *   titles: - Array of Strings fot the titles of a set,
+  *   titles: - Array of Strings for the titles of a set,
   *   data: - Array of arrays of data for each of the titles,
   *   classes: data for the classes of every data array for every title
   * }

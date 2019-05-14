@@ -1,19 +1,21 @@
 var ID3A = require('./id3-algorithm');
 
 let test = new ID3A({
-  titles: ['cielo', 'barometro', 'viento'],
+  titles: ['Cielo', 'Temperatura', 'Humedad', 'Viento'],
   data: [
-    ['limpio', 'nublado', 'nublado', 'limpio', 'nublado', 'nublado', 'nublado', 'limpio'],
-    ['subiendo', 'subiendo', 'estable', 'bajando', 'bajando', 'subiendo', 'bajando', 'subiendo'],
-    ['norte', 'sur', 'norte', 'norte', 'norte', 'norte', 'sur', 'sur']
+    ['Sol', 'Sol', 'Nubes', 'Lluvia', 'Lluvia', 'Lluvia', 'Nubes', 'Sol', 'Sol', 'Lluvia', 'Sol', 'Nubes', 'Nubes', 'Lluvia'],
+    ['Alta', 'Alta', 'Alta', 'Suave', 'Baja', 'Baja', 'Baja', 'Suave', 'Baja', 'Suave', 'Suave', 'Suave', 'Alta', 'Suave'],
+    ['Alta', 'Alta', 'Alta', 'Alta', 'Normal', 'Normal', 'Normal', 'Alta', 'Normal', 'Normal', 'Normal', 'Alta', 'Normal', 'Alta'],
+    ['Débil', 'Fuerte', 'Débil', 'Débil', 'Débil', 'Fuerte', 'Fuerte', 'Débil', 'Débil', 'Débil', 'Fuerte', 'Fuerte', 'Débil', 'Fuerte']
   ],
-  classes: ['no', 'si', 'si', 'no', 'si', 'si', 'no', 'no']
+  classes: ['No', 'No', 'Sí', 'Sí', 'Sí', 'No', 'Sí', 'No', 'Sí', 'Sí', 'Sí', 'Sí', 'Sí', 'No']
 });
 
-let res = test.getTree();
-console.log(res);
+// let res = test.getTree();
+// console.log(res);
 
-console.log('=======================================');
-console.log('=======================================');
+console.log('------------------------------------------');
+console.log('--------------ÁRBOL OBTENIDO--------------');
+console.log('------------------------------------------');
 
 console.log(test.getRules());
