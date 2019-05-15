@@ -30,7 +30,7 @@ var last = []
 lineReader.on('line', function (line) {
   lineCounter++
   lines.push(line)
-  if (lineCounter === 22000) {
+  if (lineCounter === 30000) {
     lineReader.close()
   }
 })
@@ -59,12 +59,8 @@ lineReader.on('close', function() {
   var ID3A = require('./id3-algorithm');
 
   let test = new ID3A({
-    titles: ['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'marital-status',
-            'occupation', 'relationship', 'race', 'sex', 'capital-gain', 'capital-loss',
-            'hours-per-week', 'native-country'],
-    data: [
-      cero,uno,dos,tres,cuatro,cinco,seis,siete,ocho,nueve,diez,once,doce,trece
-    ],
+    titles: ['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country'],
+    data: [ uno,tres,cinco,seis,siete,ocho,nueve,trece ],
     classes: last
   });
   

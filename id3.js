@@ -90,13 +90,15 @@ module.exports = class id3 {
 
     console.log('Best: ', best)
 
-    data[titles.indexOf(best.title)].forEach((c, index) => {
-      if(types[c] == null) {
-        types[c] = [index];
-      }else {
-        types[c].push(index);
-      }
-    });
+    if (data[titles.indexOf(best.title)]) {
+      data[titles.indexOf(best.title)].forEach((c, index) => {
+        if(types[c] == null) {
+          types[c] = [index];
+        }else {
+          types[c].push(index);
+        }
+      })
+    }
 
     idTree = new Tree(new Node(best.title, [], null));
 
