@@ -30,7 +30,7 @@ module.exports = class DFS {
       rule += `${node.title} => `;
     }else if(node.children.length == 0) {
       rule += `${node.title}`;
-      rules.push(rule);
+      rules.push({rule});
     }
     node.discovered = true;
     node.children.forEach(n => {

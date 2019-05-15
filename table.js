@@ -95,6 +95,7 @@ module.exports = class Table {
     this.titles.forEach((t, index) => {
       entropy[t] = this.getEntropyOfTitle(this.data[index]);
     });
+    console.log(entropy)
     return entropy;
   }
 

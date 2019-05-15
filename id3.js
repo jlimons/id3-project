@@ -88,6 +88,8 @@ module.exports = class id3 {
       }
     });
 
+    console.log('Best: ', best)
+
     data[titles.indexOf(best.title)].forEach((c, index) => {
       if(types[c] == null) {
         types[c] = [index];
