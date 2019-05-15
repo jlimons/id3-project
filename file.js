@@ -30,7 +30,7 @@ var last = []
 lineReader.on('line', function (line) {
   lineCounter++
   lines.push(line)
-  if (lineCounter === 10000) {
+  if (lineCounter === 22000) {
     lineReader.close()
   }
 })
@@ -83,6 +83,7 @@ lineReader.on('close', function() {
   
   // console.log(test.getRules());
   console.dir( test.getRules(), {'maxArrayLength': null})
+  // console.log('Número de reglas: ', test.getRules().length)
   // console.log( test.getRules(), {'maxArrayLength': null} );
 
   process.exit(0);

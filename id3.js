@@ -106,11 +106,13 @@ module.exports = class id3 {
       let numberOfClasses = Object.keys(childTable.getProbabilities());
       if(numberOfClasses.length > 1) {//there is more than a class, start recursion
         let newNode = new Node(data[titles.indexOf(best.title)][types[type][0]], [], null);
+        // console.log('NODE: ', newNode )
         newNode.add((new id3(childTable).getTree()).getHead() );
         idTree.add( newNode ) ;
-      }else {// this type describes a final node ad it to the tree
+      }else {// this type describes a final node add it to the tree
         let newNode = new Node(data[titles.indexOf(best.title)][types[type][0]], [], null);
         newNode.add(new Node(classes[types[type][0]], [], null));
+        // console.log('NODE: ', newNode )
         idTree.add(newNode);
       }
     }

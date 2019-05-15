@@ -11,9 +11,6 @@ let test = new ID3A({
   classes: ['No', 'No', 'Sí', 'Sí', 'Sí', 'No', 'Sí', 'No', 'Sí', 'Sí', 'Sí', 'Sí', 'Sí', 'No']
 });
 
-// let res = test.getTree();
-// console.log(res);
-
 console.log('------------------------------------------');
 console.log('--------------ÁRBOL OBTENIDO--------------');
 console.log('------------------------------------------');
